@@ -1,0 +1,59 @@
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;vertical-align:baseline;text-decoration:none}
+strong{font-weight:bold;}
+:focus{outline:0}
+ol, ul{list-style:none}
+table{border-collapse: separate;border-spacing:0}
+caption, th, td{text-align: left;font-weight: normal}
+blockquote:before, blockquote:after, q:before, q:after {content: ""}
+blockquote, q{ quotes: "" ""}
+html{overflow:-moz-scrollbars-vertical}
+a{color:#989898}
+a:hover{text-decoration:none;}
+.clear {clear: both;}
+
+body {
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size:15px;
+	font-size:180%;
+  color:#000; 
+  text-shadow: 0px 1px 0px #fff;
+}
+
+h1 {
+	width:100%; 
+	margin:0 auto; 
+	text-align:center;
+	color:#000000;
+}
+#container {
+	outline: none;
+	width:70%; 
+	margin:20px auto; 
+	padding:20px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#ffffff));
+	background: -moz-linear-gradient(top,  #bcbcbe,  #ffffff);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #717171;
+	-webkit-box-shadow: 1px 1px 0px #efefef;
+	-moz-box-shadow: 1px 1px 0px #efefef;
+	box-shadow:  1px 1px 0px #efefef
+	border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	-moz-border-radius:10px 10px 10px 10px;
+}
+
+h1 {font-size:150%;}
+h2 {margin:20px 0; color:#666;}
+#main p, #main {font-size:90%;}
+#main ul {font-size:90%; border-bottom:1px solid #000; padding:20px 0 20px 0;}
+#main ul li {font-size:50%;}
+
+nav {margin:0 0 20px 0;}
+nav li {list-style:none; line-height:100%; font-size:60%;}
+nav li a {color:#c90; font-size:100%;}
+
+header nav li {float:left; margin:0 20px 0 0;}
+header nav li a {display:block; padding:5px; background:#fff;}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+ 	<title>Correios Track Search - jQuery</title>
+ 	<meta name="description" content="" />
+ 	<meta name="author" content="" />
+	<meta name="Copyright" content="Copyright Your Name Here 2010. All Rights Reserved." />
+	<link rel="stylesheet" href="correios.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+	<h1><a href="/">Correios Track Search - jQuery</a></h1>
+	
+	<div id="container">
+		<header>
+			<nav>
+				<li><a href="javascript:void(0);" class="correios-add-track">Add a track code example.</a></li>
+				<li><a href="javascript:void(0);" class="correios-clear">Clear results example</a></li>
+				<br clear="all" />
+			</nav>
+			
+		</header>
+
+		<div id="main">
+			<div class="correios-retsults-container">
+				<p>No track code selected.</p>
+			</div>
+			
+			<h2>Enjoy this lib!</h2>
+			<nav>
+			<li>source code: <a href="https://github.com/djalmaaraujo/correios-yql">github.com/djalmaaraujo/correios-yql</a></li>
+			<li>talk to me: <a href="http://www.twitter.com/djalmaaraujo">@djalmaaraujo</a></li>
+			</nav>
+		</div>
+	</div><!--! end of #container -->
+
+	<!-- Grab jQuery CDN's jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+	<script>/*<![CDATA[*/!window.jQuery && document.write('<script src="jquery-1.6.1.min.js"><\/script>');/*]]>*/</script>
+	<script src="correios.js?v=0.0.1"></script>
+	<script>Correios.targetClick = '.correios-add-track';</script>
+</body>
+</html>
