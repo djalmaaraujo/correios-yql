@@ -17,7 +17,7 @@ Correios = (function() {
 			 * Target Results container
 			 *
 			 */
-			resultsContainer: '.correios-retsults-container',
+			resultsContainer: '.correios-results-container',
 
 			/**
 			 * Target Clear Click
@@ -70,7 +70,11 @@ Correios = (function() {
 				var statues = data.query.results.status;
 				var titleBox = $('<h3 />').text('Tracking: ' + Opts.trackingNow);
 				$(Opts.resultsContainer).html('').append(titleBox);
-				
+				var statuesAmount = statues.length-1;
+				for (var i = statuesAmount ; i >= 0 ; i--) {
+					
+				}
+				statues.reverse();
 				$.each(statues, function() {
 					var track = this;
 					var trackBox = $('<div />').html('<ul><li class="datetime">Data/Hora: ' + track.data + '</li><li class="correios-details">Detalhes: ' + track.detalhes + '</li><li class="correios-place">Local: ' + track.local + '</li><li class="correios-situation">Situação: ' + track.situacao + '</li></ul>');
