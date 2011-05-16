@@ -66,20 +66,21 @@ Correios = (function() {
 			 *
 			 */
 			printResults: function(data) {
-				var obj = this;
-				var statues = data.query.results.status;
-				var titleBox = $('<h3 />').text('Tracking: ' + Opts.trackingNow);
-				$(Opts.resultsContainer).html('').append(titleBox);
-				var statuesAmount = statues.length-1;
-				for (var i = statuesAmount ; i >= 0 ; i--) {
-					
+				if (data.query.results) {
+					var obj = this;
+					var statues = data.query.results.status;
+					var titleBox = $('<h3 />').text('Tracking: ' + Opts.trackingNow);
+					$(Opts.resultsContainer).html('').append(titleBox);
+					statues.reverse();
+					$.each(statues, function() {
+						var track = this;
+						var trackBox = $('<div />').html('<ul><li class="datetime">Data/Hora: ' + track.data + '</li><li class="correios-details">Detalhes: ' + track.detalhes + '</li><li class="correios-place">Local: ' + track.local + '</li><li class="correios-situation">Situação: ' + track.situacao + '</li></ul>');
+						$(Opts.resultsContainer).append(trackBox);
+					});
+				} else {
+					var trackBox = $('<p />').html('<strong>Código inválido/serviço indisponível no momento.</strong>');
+					$(Opts.resultsContainer).html('').append(trackBox);
 				}
-				statues.reverse();
-				$.each(statues, function() {
-					var track = this;
-					var trackBox = $('<div />').html('<ul><li class="datetime">Data/Hora: ' + track.data + '</li><li class="correios-details">Detalhes: ' + track.detalhes + '</li><li class="correios-place">Local: ' + track.local + '</li><li class="correios-situation">Situação: ' + track.situacao + '</li></ul>');
-					$(Opts.resultsContainer).append(trackBox);
-				});
 			},
 
 			/**
